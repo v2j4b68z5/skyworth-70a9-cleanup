@@ -117,9 +117,11 @@ docs/
   guard.md             局域网守护方案：原理、部署、自启、排错
   launcher.md          桌面怎么编、怎么配（含 dock / app_library / 直播自动启动）
   debloat.md           14 个包的逐个说明与恢复方法
+  iptv.md              直播源实测：7 份列表的可用率，以及怎么自己测
   pitfalls.md          踩坑记录（含 3 个别人没踩过的新坑）
 scripts/
   watch-home.ps1       局域网守护脚本（Windows PowerShell）
+  test-sources.ps1     多源试流：只留下真能播的频道，合成一份清单
   debloat-70A9.txt     停用清单
 LICENSE                MIT
 ```
