@@ -1,0 +1,16 @@
+# Local backups and logs never belong in the repository
+backup/
+*.log
+_probe/
+work/
+
+# Build leftovers
+_build/
+launcher/
+tools/venv/
+
+# OS / editor noise
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/

@@ -1,0 +1,46 @@
+# Skyworth 70A9 / 7S86_A9 (Coocaa OS, Android 8.0, build 022.008.220)
+# Packages disabled with `pm disable-user --user 0`, 2026-11-13.
+# NOTHING WAS UNINSTALLED. Every line is reversible with `pm enable --user 0 <pkg>`.
+#
+# Restore one:    tools\tv.py 'pm enable --user 0 com.tianci.ad'
+# Restore all:    see docs/debloat.md
+#
+# 14 packages total.
+
+# Ads / telemetry / promotion -- nobody wants these
+com.tianci.ad              # boot ad activity (persist.sys.ad.startboot -> .ui.BootViewActivity)
+com.tianci.push            # push service + Sensors Data analytics
+com.coocaa.sysreport       # usage reporting on boot / screen change / app install
+com.tianci.autoinstaller   # SILENTLY INSTALLS promoted apps -- the worst one here
+com.baidu.oases            # Baidu SDK service, starts at boot
+
+# Junk preloads
+com.coocaa.screensaver     # screensaver with an ad SDK inside
+com.coocaa.os.thememanager # theme store
+com.coocaa.messageprovider # system message box, pushes promotions
+com.coocaa.teampresent     # help / customer service
+com.coocaa.educate         # kids / education channel, ad SDK
+com.coocaa.lifeassistant   # alarm, sleep aid, weather
+com.coocaa.tvmanager       # "TV manager" -- actually Baidu TV guard, cleaner/booster
+com.skyworth.skymarket     # shop demo mode
+com.coocaa.guide           # boot / upgrade guide, push receiver
+
+# KEPT ON PURPOSE -- do not add these to the list
+# com.tianci.appstore      # app store; without it you cannot install apps on the TV
+# com.coocaa.os.upgrade    # system updater
+# com.newtv.cboxtv         # main content app (NewTV)
+# com.xiaodianshi.tv.yst   # content app
+# com.kkys.tv1             # content app
+# com.gitv.dvb.live        # live TV (DVB)
+# com.tianci.localmedia    # media player
+# com.coocaa.karaoke       # karaoke
+# com.hpplay.happyplay.aw  # cast receiver
+# com.skyworth.tv          # inputs / tuner; the launcher's Inputs menu goes through it
+# com.tianci.system        # Home key, source panel, memory manager -- DO NOT TOUCH
+# com.coocaa.os.ccosservice# same; control centre service
+# com.coocaa.os.manager    # security/install guard; disabling it has not been tested
+# com.coocaa.safelauncher  # safety launcher
+# com.coocaa.factory       # factory menu entry; you need it to switch ADB off again
+# com.tianci.movieplatform # stock home. The firmware re-enables and force-launches it;
+#                          # disabling it does not help (see docs/evidence.md) and on other
+#                          # Coocaa sets it hangs the boot on the COOCAA logo.
